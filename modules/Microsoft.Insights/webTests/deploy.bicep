@@ -7,7 +7,7 @@ param webTestName string
 @description('Required. Tags of the resource.')
 param tags object
 
-@description('Required. The collection of request properties')
+@description('Required. The collection of request properties.')
 param request object
 
 @description('Optional. Location for all Resources.')

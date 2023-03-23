@@ -25,7 +25,7 @@ This module deploys Insights WebTests.
 | Parameter Name | Type | Description |
 | :-- | :-- | :-- |
 | `name` | string | Name of the webtest. |
-| `request` | object | The collection of request properties |
+| `request` | object | The collection of request properties. |
 | `syntheticMonitorId` | string | Unique ID of this WebTest. This is typically the same value as the Name field. |
 | `tags` | object | Tags of the resource. |
 | `webTestName` | string | User defined name if this WebTest. |
