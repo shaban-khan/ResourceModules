@@ -27,7 +27,7 @@ param syntheticMonitorId string
 ])
 param kind string = 'standard'
 
-@description('Optional. A list of where to physically run the tests from to give global coverage for accessibility of your application.')
+@description('Optional. List of where to physically run the tests from to give global coverage for accessibility of your application.')
 param webTestGeolocation array = [
   {
     Id: 'us-il-ch1-azr'
@@ -58,7 +58,7 @@ param timeout int = 30
 @description('Optional. Allow for retries should this WebTest fail.')
 param retryEnabled bool = true
 
-@description('Optional. The collection of validation rule properties')
+@description('Optional. The collection of validation rule properties.')
 param validationRules object = {}
 
 @description('Optional. An XML configuration specification for a WebTest.')

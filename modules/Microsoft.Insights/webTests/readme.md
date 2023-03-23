@@ -44,8 +44,8 @@ This module deploys Insights WebTests.
 | `retryEnabled` | bool | `True` |  | Allow for retries should this WebTest fail. |
 | `roleAssignments` | array | `[]` |  | Array of role assignment objects that contain the 'roleDefinitionIdOrName' and 'principalId' to define RBAC role assignments on this resource. In the roleDefinitionIdOrName attribute, you can provide either the display name of the role definition, or its fully qualified ID in the following format: '/providers/Microsoft.Authorization/roleDefinitions/c2f4ef07-c644-48eb-af81-4b1b4947fb11'. |
 | `timeout` | int | `30` |  | Seconds until this WebTest will timeout and fail. Default value is 30. |
-| `validationRules` | object | `{object}` |  | The collection of validation rule properties |
-| `webTestGeolocation` | array | `[System.Management.Automation.OrderedHashtable, System.Management.Automation.OrderedHashtable, System.Management.Automation.OrderedHashtable, System.Management.Automation.OrderedHashtable, System.Management.Automation.OrderedHashtable]` |  | A list of where to physically run the tests from to give global coverage for accessibility of your application. |
+| `validationRules` | object | `{object}` |  | The collection of validation rule properties. |
+| `webTestGeolocation` | array | `[System.Management.Automation.OrderedHashtable, System.Management.Automation.OrderedHashtable, System.Management.Automation.OrderedHashtable, System.Management.Automation.OrderedHashtable, System.Management.Automation.OrderedHashtable]` |  | List of where to physically run the tests from to give global coverage for accessibility of your application. |
 
 
 ### Parameter Usage: `<ParameterPlaceholder>`
