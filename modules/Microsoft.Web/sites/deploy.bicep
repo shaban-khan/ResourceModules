@@ -368,7 +368,7 @@ resource app_lock 'Microsoft.Authorization/locks@2020-05-01' = if (!empty(lock))
 @description('Optional. The topic names which are associated with the domain.')
 param sitePublishingCredPolicyNames array = []
 
-module sitePublishingCredPolicies 'basicPublishingCredentialsPolicies/deploy.bicep' = [for (sitePublishingCredPolicyName, index) in sitePublishingCredPolicyNames: {
+module app_sitePublishingCredPolicies 'basicPublishingCredentialsPolicies/deploy.bicep' = [for (sitePublishingCredPolicyName, index) in sitePublishingCredPolicyNames: {
   name: '${uniqueString(deployment().name, location)}-Site-basic-PublishingCredentialsPolicies-${index}'
   params: {
     webAppName: app.name
