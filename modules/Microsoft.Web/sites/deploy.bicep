@@ -369,7 +369,7 @@ resource app_lock 'Microsoft.Authorization/locks@2020-05-01' = if (!empty(lock))
 param sitePublishingCredPolicyNames array = []
 
 module app_sitePublishingCredPolicies 'basicPublishingCredentialsPolicies/deploy.bicep' = [for (sitePublishingCredPolicyName, index) in sitePublishingCredPolicyNames: {
-  name: '${uniqueString(deployment().name, location)}-Site-basic-PublishingCredentialsPolicies-${index}'
+  name: '${uniqueString(deployment().name, location)}-Site-Publis-Cred-${index}'
   params: {
     webAppName: app.name
     name: sitePublishingCredPolicyName
