@@ -46,6 +46,7 @@ This module deploys Web Sites BasicPublishingCredentialsPolicies.
 
 | Output Name | Type | Description |
 | :-- | :-- | :-- |
+| `location` | string | The location the resource was deployed into. |
 | `name` | string | The name of the event grid topic. |
 | `resourceGroupName` | string | The name of the resource group the event grid topic was deployed into. |
 | `resourceId` | string | The resource ID of the event grid topic. |

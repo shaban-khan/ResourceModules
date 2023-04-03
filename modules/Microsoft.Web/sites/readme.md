@@ -1091,7 +1091,7 @@ module sites './Microsoft.Web/sites/deploy.bicep' = {
   params: {
     // Required parameters
     kind: 'app'
-    name: 'skhanwswamin001'
+    name: '<<namePrefix>>wswamin001'
     serverFarmResourceId: '<serverFarmResourceId>'
     // Non-required parameters
     enableDefaultTelemetry: '<enableDefaultTelemetry>'
@@ -1116,7 +1116,7 @@ module sites './Microsoft.Web/sites/deploy.bicep' = {
       "value": "app"
     },
     "name": {
-      "value": "skhanwswamin001"
+      "value": "<<namePrefix>>wswamin001"
     },
     "serverFarmResourceId": {
       "value": "<serverFarmResourceId>"

@@ -1,11 +1,11 @@
-@description('Required. The name of the resource.')
+@sys.description('Required. The name of the resource.')
 @allowed([
   'scm'
   'ftp'
 ])
 param name string
 
-@description('Conditional. The name of the parent Event Grid Domain. Required if the template is used in a standalone deployment.')
+@sys.description('Conditional. The name of the parent Event Grid Domain. Required if the template is used in a standalone deployment.')
 param webAppName string
 
 @description('Optional. Location for all Resources.')
@@ -39,11 +39,14 @@ resource sitePublishingCredPolicies 'Microsoft.Web/sites/basicPublishingCredenti
   }
 }
 
-@description('The name of the event grid topic.')
+@sys.description('The name of the event grid topic.')
 output name string = sitePublishingCredPolicies.name
 
-@description('The resource ID of the event grid topic.')
+@sys.description('The resource ID of the event grid topic.')
 output resourceId string = sitePublishingCredPolicies.id
 
-@description('The name of the resource group the event grid topic was deployed into.')
+@sys.description('The name of the resource group the event grid topic was deployed into.')
 output resourceGroupName string = resourceGroup().name
+
+@sys.description('The location the resource was deployed into.')
+output location string = sitePublishingCredPolicies.location
