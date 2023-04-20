@@ -312,3 +312,80 @@ module managedEnvironments './Microsoft.App/managedEnvironments/deploy.bicep' = 
 
 </details>
 <p>
+
+<h3>Example 3: Pe</h3>
+
+<details>
+
+<summary>via Bicep module</summary>
+
+```bicep
+module managedEnvironments './Microsoft.App/managedEnvironments/deploy.bicep' = {
+  name: '${uniqueString(deployment().name, location)}-test-amecom'
+  params: {
+    // Required parameters
+    enableDefaultTelemetry: '<enableDefaultTelemetry>'
+    logAnalyticsWorkspaceResourceId: '<logAnalyticsWorkspaceResourceId>'
+    name: '<<namePrefix>>amecom001'
+    // Non-required parameters
+    infrastructureSubnetId: '<infrastructureSubnetId>'
+    internal: true
+    location: '<location>'
+    lock: 'CanNotDelete'
+    skuName: 'Consumption'
+    tags: {
+      Env: 'test'
+    }
+  }
+}
+```
+
+</details>
+<p>
+
+<details>
+
+<summary>via JSON Parameter file</summary>
+
+```json
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    // Required parameters
+    "enableDefaultTelemetry": {
+      "value": "<enableDefaultTelemetry>"
+    },
+    "logAnalyticsWorkspaceResourceId": {
+      "value": "<logAnalyticsWorkspaceResourceId>"
+    },
+    "name": {
+      "value": "<<namePrefix>>amecom001"
+    },
+    // Non-required parameters
+    "infrastructureSubnetId": {
+      "value": "<infrastructureSubnetId>"
+    },
+    "internal": {
+      "value": true
+    },
+    "location": {
+      "value": "<location>"
+    },
+    "lock": {
+      "value": "CanNotDelete"
+    },
+    "skuName": {
+      "value": "Consumption"
+    },
+    "tags": {
+      "value": {
+        "Env": "test"
+      }
+    }
+  }
+}
+```
+
+</details>
+<p>
